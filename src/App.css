@@ -1,0 +1,61 @@
+/* Estilos customizados do app */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Category Item Responsive Styles */
+@media (min-width: 1024px) {
+  .category-item {
+    flex-direction: row !important;
+    border-radius: 9999px !important;
+    padding: 0.75rem 1.5rem !important;
+    min-width: 160px !important;
+    gap: 0.75rem !important;
+  }
+  
+  .category-item[data-selected="true"] {
+    background-color: #FFCC00 !important;
+  }
+  
+  .category-item[data-selected="false"] {
+    background-color: white !important;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+  }
+  
+  .category-icon-wrapper {
+    width: auto !important;
+    height: auto !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+  
+  .category-label[data-selected="true"] {
+    color: white !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+  }
+  
+  .category-label[data-selected="false"] {
+    color: #2F394A !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+  }
+}
