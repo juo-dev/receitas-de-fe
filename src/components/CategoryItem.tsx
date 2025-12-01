@@ -1,19 +1,24 @@
 import type { FC } from 'react';
+import { useState } from 'react';
 import Icon from './Icon';
 
 interface CategoryItemProps {
   id: string;
   name: string;
-  icon: 'salgados' | 'massas' | 'doces' | 'bolos' | 'bebidas' | 'saudavel';
+  icon: 'home' | 'salgados' | 'massas' | 'doces' | 'bolos' | 'bebidas' | 'saudavel';
   selected: boolean;
   onClick: () => void;
 }
 
 const CategoryItem: FC<CategoryItemProps> = ({ name, icon, selected, onClick }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  
   return (
     <button
       onClick={onClick}
       data-selected={selected}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -37,12 +42,12 @@ const CategoryItem: FC<CategoryItemProps> = ({ name, icon, selected, onClick }) 
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: 'white',
-          border: selected ? '2px solid #FFCC00' : 'none',
+          backgroundColor: selected ? '#FFCC00' : 'white',
+          border: 'none',
         }}
         className="category-icon-wrapper"
       >
-        <Icon name={icon} selected={selected} size={32} />
+        <Icon name={icon} selected={selected || isHovered} size={32} />
       </div>
       
       <span 
@@ -51,7 +56,7 @@ const CategoryItem: FC<CategoryItemProps> = ({ name, icon, selected, onClick }) 
           fontSize: '0.875rem',
           fontWeight: 500,
           textAlign: 'center',
-          color: selected ? '#2F394A' : '#9CA3AF',
+          color: selected ? '#FFCC00' : '#9CA3AF',
           transition: 'color 0.2s',
         }}
         className="category-label"

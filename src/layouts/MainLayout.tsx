@@ -7,8 +7,8 @@ interface MainLayoutProps {
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#E0E0E0', paddingBottom: '4rem' }}>
-      <main style={{ maxWidth: '1280px', margin: '0 auto' }}>
+    <div className="pb-16 lg:pb-0" style={{ minHeight: '100vh', backgroundColor: '#F7F7F7' }}>
+      <main>
         {children}
       </main>
       <BottomTabBar />
