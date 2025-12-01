@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bebida-de-frutas-tropicais",
+    "title": "Bebida de Frutas Tropicais",
+    "description": "Em um refratário grande, adicione os limões siciliano cortad...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764594333050.png",
+    "category": "bebidas",
+    "categoryName": "Bebidas"
+  },
+  {
+    "id": "frango-recheado-com-legumes",
+    "title": "Frango Recheado com Legumes",
+    "description": "Comece cortando um o peito de frango ao meio, formando 2 fil...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764439350166.png",
+    "category": "salgados",
+    "categoryName": "Salgados"
+  },
+  {
+    "id": "sonho-de-massa-folhada",
+    "title": "Sonho de Massa Folhada",
+    "description": "Comece cortando a massa folhada em formato redondo, utilizan...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764361044277.png",
+    "category": "doces",
+    "categoryName": "Doces"
+  },
+  {
+    "id": "macarrao-com-pimentao-e-frango",
+    "title": "Macarrão com Pimentão e Frango",
+    "description": "Comece cortando o macarrão cozido em cubos e reserve.Em uma ...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764340392557.png",
+    "category": "massas",
+    "categoryName": "Massas"
+  },
+  {
+    "id": "bolo-de-frigideira-com-caramelo",
+    "title": "Bolo de Frigideira com Caramelo",
+    "description": "Em uma frigideira grande, adicione o queijo processado, os o...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764360681526.png",
+    "category": "bolos",
+    "categoryName": "Bolos"
+  },
+  {
+    "id": "lanche-de-linguica-com-bacon-e-queijo",
+    "title": "Lanche de Linguiça com Bacon e Queijo",
+    "description": "Comece adicionando em uma tabua as fatias de mussarela e as ...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764256554812.png",
+    "category": "salgados",
+    "categoryName": "Salgados"
+  },
+  {
+    "id": "coxas-de-frango-crocantes-com-queijo",
+    "title": "Coxas de Frango Crocantes com Queijo",
+    "description": "Comece retirando parcialmente a pele das coxas de frango.Em ...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764252667055.png",
+    "category": "salgados",
+    "categoryName": "Salgados"
+  },
+  {
+    "id": "queijo-caseiro-de-manteiga",
+    "title": "Queijo Caseiro de Manteiga",
+    "description": "Comece adicionando a manteiga no leite quente em uma panela ...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764166031748.png",
+    "category": "salgados",
+    "categoryName": "Salgados"
+  },
+  {
+    "id": "salgadinho-de-lasanha-com-queijo",
+    "title": "Salgadinho de Lasanha com Queijo",
+    "description": "Comece enrolando a mussarela nas tiras massa de lasanha cozi...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764165071925.png",
+    "category": "salgados",
+    "categoryName": "Salgados"
+  },
+  {
+    "id": "omelete-recheado-com-salsicha",
+    "title": "Omelete Recheado com Salsicha",
+    "description": "Comece cortando as salsichas ao meio e em rodelas finas.Depo...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764090026478.png",
+    "category": "salgados",
+    "categoryName": "Salgados"
+  },
+  {
+    "id": "sobremesa-de-limao-com-biscoitos",
+    "title": "Sobremesa de Limão com Biscoitos",
+    "description": "Comece cortando a ponta dos biscoitos champanhe e molhe todo...",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1764079103565.png",
+    "category": "doces",
+    "categoryName": "Doces"
+  },
+  {
+    "id": "bolo-com-geleia-de-roma",
+    "title": "Bolo com Geleia de Romã",
+    "description": "Comece adicionado a romã no liquidificador e bata muito bem....",
+    "image": "https://cdn.aquelareceita.com.br/recipes/image-1763993534689.png",
+    "category": "bolos",
+    "categoryName": "Bolos"
+  }
+]

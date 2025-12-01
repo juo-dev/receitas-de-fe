@@ -1,20 +1,22 @@
 import type { FC } from 'react';
 import Icon from './Icon';
 
-interface RecipeCard1Props {
+interface RecipeCard2Props {
   image: string;
   category: 'salgados' | 'massas' | 'doces' | 'bolos' | 'bebidas' | 'saudavel';
   categoryName: string;
   title: string;
+  description: string;
   onFavoriteClick?: () => void;
   onClick?: () => void;
 }
 
-const RecipeCard1: FC<RecipeCard1Props> = ({ 
+const RecipeCard2: FC<RecipeCard2Props> = ({ 
   image, 
   category, 
   categoryName, 
   title,
+  description,
   onFavoriteClick,
   onClick 
 }) => {
@@ -42,8 +44,8 @@ const RecipeCard1: FC<RecipeCard1Props> = ({
           className="absolute top-1 right-0 h-[50px] cursor-pointer"
         />
 
-        {/* Category Badge - metade dentro, metade fora */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex items-center gap-1 bg-white px-3 py-[0.35rem] rounded-full shadow-sm z-10">
+        {/* Category Badge - aligned to left */}
+        <div className="absolute bottom-0 left-4 translate-y-1/2 flex items-center gap-1 bg-white px-3 py-[0.35rem] rounded-full shadow-sm z-10">
           <Icon name={category} selected={false} size={16} />
           <span className="text-xs font-semibold text-dark">
             {categoryName}
@@ -51,14 +53,17 @@ const RecipeCard1: FC<RecipeCard1Props> = ({
         </div>
       </div>
 
-      {/* Title */}
-      <div className="pt-6 pb-2">
-        <h3 className="text-base font-bold text-dark m-0 text-center">
+      {/* Title and Description - aligned to left */}
+      <div className="pt-6 pb-2 px-2">
+        <h3 className="text-base font-bold text-dark m-0 mb-1">
           {title}
         </h3>
+        <p className="text-xs text-gray-400 mt-1">
+          {description}
+        </p>
       </div>
     </div>
   );
 };
 
-export default RecipeCard1;
+export default RecipeCard2;

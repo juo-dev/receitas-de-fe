@@ -1,15 +1,13 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import CategoryItem from '../components/CategoryItem';
-import { CATEGORIES, RECIPES } from '../data/recipes';
+import { CATEGORIES } from '../data/recipes';
+import { LATEST_RECIPES } from '../data/latestRecipes';
 import RecipeCard1 from '../components/RecipeCard1';
+import RecipeCard2 from '../components/RecipeCard2';
 
 const Home: FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
-  const filteredRecipes = selectedCategory
-    ? RECIPES.filter(recipe => recipe.category === selectedCategory)
-    : RECIPES;
 
   const handleCategoryClick = (categoryId: string) => {
     setSelectedCategory(selectedCategory === categoryId ? null : categoryId);
@@ -145,33 +143,39 @@ const Home: FC = () => {
           </div>
         </div>
 
-        {/* Recipes Grid */}
-        <div className="p-4 max-w-[1310px] mx-auto">
-          <div className="grid grid-cols-2 gap-4">
-            {filteredRecipes.map((recipe) => (
-              <div
-                key={recipe.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <img
-                  src={recipe.image}
-                  alt={recipe.title}
-                  className="w-full h-32 object-cover"
+        {/* Main Content - 3/4 and 1/4 Layout */}
+        <div className="max-w-[1310px] mx-auto px-4 flex gap-4">
+          {/* Left Section - 3/4 - Últimas receitas */}
+          <div className="flex-[3]">
+            {/* Section Header */}
+            <div className="flex justify-between items-center mb-3">
+              <h2 className="text-2xl font-bold text-dark m-0">
+                Últimas receitas
+              </h2>
+              <button className="bg-transparent border-none text-dark text-sm font-semibold cursor-pointer underline">
+                mais...
+              </button>
+            </div>
+
+            {/* Grid 3 columns x 4 rows */}
+            <div className="grid grid-cols-3 gap-4">
+              {LATEST_RECIPES.map((recipe) => (
+                <RecipeCard2
+                  key={recipe.id}
+                  image={recipe.image}
+                  category={recipe.category}
+                  categoryName={recipe.categoryName}
+                  title={recipe.title}
+                  description={recipe.description}
                 />
-                <div className="p-3">
-                  <h3 className="font-semibold text-dark text-sm mb-1">
-                    {recipe.title}
-                  </h3>
-                  <p className="text-xs text-gray-400 line-clamp-2">
-                    {recipe.description}
-                  </p>
-                  <div className="flex items-center gap-2 mt-2 text-xs text-gray-400">
-                    <span>⏱️ {recipe.prepTime} min</span>
-                    <span>👥 {recipe.servings}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Right Section - 1/4 - Placeholder for next section */}
+          <div className="flex-1 bg-white rounded-lg p-4 h-fit">
+            <h3 className="text-lg font-bold text-dark mb-2">Próxima seção</h3>
+            <p className="text-sm text-gray-400">Conteúdo será adicionado aqui</p>
           </div>
         </div>
       </div>
