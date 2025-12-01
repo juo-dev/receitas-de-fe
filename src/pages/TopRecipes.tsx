@@ -5,8 +5,8 @@ const TopRecipes: FC = () => {
   const topRecipes = getLatestRecipes();
 
   return (
-    <div className="min-h-screen bg-[#EEEEEE]">
-      <header className="p-4" style={{ backgroundColor: '#FFCC00' }}>
+    <div className="min-h-screen bg-gray-100">
+      <header className="p-4 bg-primary">
         <h1 className="text-2xl font-bold text-dark text-center">Em Alta 🔥</h1>
       </header>
 

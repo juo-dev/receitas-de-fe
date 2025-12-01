@@ -7,7 +7,7 @@ interface MainLayoutProps {
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div className="pb-16 lg:pb-0" style={{ minHeight: '100vh', backgroundColor: '#F7F7F7' }}>
+    <div className="pb-16 lg:pb-0 min-h-screen bg-gray-100">
       <main>
         {children}
       </main>

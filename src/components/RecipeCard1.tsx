@@ -16,36 +16,20 @@ const RecipeCard1: FC<RecipeCard1Props> = ({
   category, 
   categoryName, 
   title, 
-  isFavorite = false,
   onFavoriteClick,
   onClick 
 }) => {
   return (
     <div 
       onClick={onClick}
-      style={{
-        position: 'relative',
-        cursor: 'pointer',
-        backgroundColor: '#F7F7F7',
-        transition: 'transform 0.2s',
-      }}
-      onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-      onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+      className="relative cursor-pointer bg-gray-100 transition-transform duration-200 hover:scale-[1.02]"
     >
       {/* Image Container */}
-      <div style={{ position: 'relative', width: '100%', paddingTop: '75%' }}>
+      <div className="relative w-full pt-[75%]">
         <img 
           src={image} 
           alt={title}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            borderRadius: '1rem'
-          }}
+          className="absolute top-0 left-0 w-full h-full object-cover rounded-2xl"
         />
         
         {/* Favorite Button */}
@@ -56,52 +40,21 @@ const RecipeCard1: FC<RecipeCard1Props> = ({
             e.stopPropagation();
             onFavoriteClick?.();
           }}
-          style={{ 
-            position: 'absolute',
-            top: '0.25rem',
-            right: '0.02rem',
-            height: '50px',
-            cursor: 'pointer'
-          }}
+          className="absolute top-1 right-0 h-[50px] cursor-pointer"
         />
 
         {/* Category Badge - metade dentro, metade fora */}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: '50%',
-            transform: 'translate(-50%, 50%)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.25rem',
-            backgroundColor: 'white',
-            padding: '0.35rem 0.75rem',
-            borderRadius: '9999px',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-            zIndex: 10
-          }}
-        >
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex items-center gap-1 bg-white px-3 py-[0.35rem] rounded-full shadow-sm z-10">
           <Icon name={category} selected={false} size={16} />
-          <span style={{ 
-            fontSize: '0.75rem', 
-            fontWeight: 600, 
-            color: '#2F394A' 
-          }}>
+          <span className="text-xs font-semibold text-dark">
             {categoryName}
           </span>
         </div>
       </div>
 
       {/* Title */}
-      <div style={{ paddingTop: '1.5rem', paddingBottom: '0.5rem' }}>
-        <h3 style={{ 
-          fontSize: '1rem', 
-          fontWeight: 'bold', 
-          color: '#2F394A',
-          margin: 0,
-          textAlign: 'center'
-        }}>
+      <div className="pt-6 pb-2">
+        <h3 className="text-base font-bold text-dark m-0 text-center">
           {title}
         </h3>
       </div>

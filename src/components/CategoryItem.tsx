@@ -19,47 +19,23 @@ const CategoryItem: FC<CategoryItemProps> = ({ name, icon, selected, onClick }) 
       data-selected={selected}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '0.5rem',
-        minWidth: '80px',
-        transition: 'all 0.2s',
-        background: 'transparent',
-        border: 'none',
-        cursor: 'pointer',
-      }}
-      className="category-item"
+      className="category-item flex flex-col items-center gap-2 min-w-[80px] transition-all duration-200 bg-transparent border-none cursor-pointer"
       aria-label={`Filtrar por ${name}`}
     >
       <div 
         data-selected={selected}
-        style={{
-          width: '64px',
-          height: '64px',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: selected ? '#FFCC00' : 'white',
-          border: 'none',
-        }}
-        className="category-icon-wrapper"
+        className={`category-icon-wrapper w-16 h-16 rounded-full flex items-center justify-center border-none ${
+          selected ? 'bg-primary' : 'bg-white'
+        }`}
       >
         <Icon name={icon} selected={selected || isHovered} size={32} />
       </div>
       
       <span 
         data-selected={selected}
-        style={{
-          fontSize: '0.875rem',
-          fontWeight: 500,
-          textAlign: 'center',
-          color: selected ? '#FFCC00' : '#9CA3AF',
-          transition: 'color 0.2s',
-        }}
-        className="category-label"
+        className={`category-label text-sm font-medium text-center transition-colors duration-200 ${
+          selected ? 'text-primary' : 'text-gray-400'
+        }`}
       >
         {name}
       </span>

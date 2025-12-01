@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 const Profile: FC = () => {
   return (
-    <div className="min-h-screen bg-[#EEEEEE]">
-      <header className="p-4" style={{ backgroundColor: '#FFCC00' }}>
+    <div className="min-h-screen bg-gray-100">
+      <header className="p-4 bg-primary">
         <h1 className="text-2xl font-bold text-dark text-center">Assinatura</h1>
       </header>
 
