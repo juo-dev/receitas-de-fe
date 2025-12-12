@@ -1,12 +1,8 @@
 import type { FC } from 'react';
 import Icon from './Icon';
+import type { DetailedRecipe } from '../types';
 
-interface RecipeCard2Props {
-  image: string;
-  category: 'salgados' | 'massas' | 'doces' | 'bolos' | 'bebidas' | 'saudavel';
-  categoryName: string;
-  title: string;
-  description: string;
+interface RecipeCard2Props extends DetailedRecipe {
   onFavoriteClick?: () => void;
   onClick?: () => void;
 }
@@ -34,15 +30,20 @@ const RecipeCard2: FC<RecipeCard2Props> = ({
         />
         
         {/* Favorite Button */}
-        <img 
-          src="/src/assets-icons/curtir.svg"
-          alt="Curtir"
+        <button
           onClick={(e) => {
             e.stopPropagation();
             onFavoriteClick?.();
           }}
-          className="absolute top-1 right-0 h-[50px] cursor-pointer"
-        />
+          className="absolute top-1 right-0 h-[50px] cursor-pointer bg-transparent border-none p-0"
+          aria-label={`Curtir receita: ${title}`}
+        >
+          <img 
+            src="/src/assets-icons/curtir.svg"
+            alt="Curtir receita"
+            className="w-full h-full"
+          />
+        </button>
 
         {/* Category Badge - aligned to left */}
         <div className="absolute bottom-0 left-4 translate-y-1/2 flex items-center gap-1 bg-white px-3 py-[0.35rem] rounded-full shadow-sm z-10">
@@ -58,7 +59,7 @@ const RecipeCard2: FC<RecipeCard2Props> = ({
         <h3 className="text-base font-bold text-dark m-0 mb-1">
           {title}
         </h3>
-        <p className="text-sm text-gray-400 mt-1" style={{ paddingBottom: '0.5rem' }}>
+        <p className="text-sm text-gray-400 mt-1 pb-2">
           {description}
         </p>
       </div>

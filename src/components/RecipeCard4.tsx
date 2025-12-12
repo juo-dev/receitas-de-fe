@@ -1,10 +1,7 @@
 import type { FC } from 'react';
+import type { RankedRecipe } from '../types';
 
-interface RecipeCard4Props {
-  rank: number;
-  image: string;
-  title: string;
-}
+interface RecipeCard4Props extends RankedRecipe {}
 
 const RecipeCard4: FC<RecipeCard4Props> = ({ rank, image, title }) => {
   return (
@@ -20,6 +17,8 @@ const RecipeCard4: FC<RecipeCard4Props> = ({ rank, image, title }) => {
         <div 
           className="w-14 h-14 rounded-lg bg-cover bg-center"
           style={{ backgroundImage: `url(${image})` }}
+          role="img"
+          aria-label={`Imagem da receita: ${title}`}
         />
       </div>
 

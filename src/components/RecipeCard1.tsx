@@ -1,11 +1,8 @@
 import type { FC } from 'react';
 import Icon from './Icon';
+import type { CategorizedRecipe } from '../types';
 
-interface RecipeCard1Props {
-  image: string;
-  category: 'salgados' | 'massas' | 'doces' | 'bolos' | 'bebidas' | 'saudavel';
-  categoryName: string;
-  title: string;
+interface RecipeCard1Props extends CategorizedRecipe {
   onFavoriteClick?: () => void;
   onClick?: () => void;
 }
@@ -32,15 +29,20 @@ const RecipeCard1: FC<RecipeCard1Props> = ({
         />
         
         {/* Favorite Button */}
-        <img 
-          src="/src/assets-icons/curtir.svg"
-          alt="Curtir"
+        <button
           onClick={(e) => {
             e.stopPropagation();
             onFavoriteClick?.();
           }}
-          className="absolute top-1 right-0 h-[50px] cursor-pointer"
-        />
+          className="absolute top-1 right-0 h-[50px] cursor-pointer bg-transparent border-none p-0"
+          aria-label={`Curtir receita: ${title}`}
+        >
+          <img 
+            src="/src/assets-icons/curtir.svg"
+            alt="Curtir receita"
+            className="w-full h-full"
+          />
+        </button>
 
         {/* Category Badge - metade dentro, metade fora */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex items-center gap-1 bg-white px-3 py-[0.35rem] rounded-full shadow-sm z-10">
