@@ -9,9 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/inicio" replace />} />
         <Route
-          path="/inicio"
+          path="/"
           element={
             <MainLayout>
               <Home />

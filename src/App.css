@@ -31,7 +31,7 @@
   }
   
   .category-item[data-selected="true"] {
-    background-color: #FFCC00 !important;
+    background-color: #93dcfb !important;
   }
   
   .category-item[data-selected="false"] {
@@ -67,7 +67,7 @@
   
   /* Hover effect on desktop */
   .category-item[data-selected="false"]:hover {
-    background-color: #FFCC00 !important;
+    background-color: #93dcfb !important;
   }
   
   .category-item[data-selected="false"]:hover .category-label {

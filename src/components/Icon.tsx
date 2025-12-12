@@ -20,8 +20,8 @@ interface IconProps {
 }
 
 const Icon: FC<IconProps> = ({ name, selected = false, size = 24, className = '' }) => {
-  // selected = branco (_alt), não selected = amarelo
-  const fillColor = selected ? 'white' : '#FFCC00';
+  // selected = branco (_alt), não selected = azul claro
+  const fillColor = selected ? 'white' : '#93dcfb';
   const strokeColor = '#2F394A';
 
   const renderIcon = () => {

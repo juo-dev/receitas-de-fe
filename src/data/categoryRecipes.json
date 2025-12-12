@@ -1,0 +1,122 @@
+{
+  "salgados": [
+    {
+      "id": 1,
+      "rank": 1,
+      "title": "Cachorro Quente Recheado de Forno",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1757082257480.png"
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Macarrão Alho e Óleo",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1680273917644.png"
+    },
+    {
+      "id": 3,
+      "rank": 3,
+      "title": "Bolinha de Frango sem Massa",
+      "image": "https://cdn.aquelareceita.com.br/recipes/IMG_6172FB-1641924680741.png"
+    }
+  ],
+  "massas": [
+    {
+      "id": 1,
+      "rank": 1,
+      "title": "Lasanha de Frango com Molho Branco",
+      "image": "https://cdn.aquelareceita.com.br/recipes/IMG_1774FULL-scaled-1641924607609.png"
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Pão de Morango com Chocolate",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1751378217502.png"
+    },
+    {
+      "id": 3,
+      "rank": 3,
+      "title": "Conchiglione Recheado com Queijo",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1746543795727.png"
+    }
+  ],
+  "doces": [
+    {
+      "id": 1,
+      "rank": 1,
+      "title": "Sobremesa com Biscoitos e Chocolate",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1740572937537.png"
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Leite Condensado Caseiro",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1641392575880-1641924646368.png"
+    },
+    {
+      "id": 3,
+      "rank": 3,
+      "title": "Ferrero Rocher e Raffaello Caseiro",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1757713106889.png"
+    }
+  ],
+  "bolos": [
+    {
+      "id": 1,
+      "rank": 1,
+      "title": "Bolo Dia Das Crianças",
+      "image": "https://cdn.aquelareceita.com.br/recipes/FB-Bolo-KIDS.00_02_49_50.Quadro001-1641924801183.png"
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Bolo com Geleia",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1718048309597.png"
+    },
+    {
+      "id": 3,
+      "rank": 3,
+      "title": "Bolo de Maçã na Frigideira com Caramelo",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1725476314063.png"
+    }
+  ],
+  "bebidas": [
+    {
+      "id": 1,
+      "rank": 1,
+      "title": "Limonada Suíça",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1724439191344.png"
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Bebida de Frutas Tropicais",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1764594333050.png"
+    },
+    {
+      "id": 3,
+      "rank": 3,
+      "title": "Vitamina de Maracujá com Manga",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1739538293910.png"
+    }
+  ],
+  "saudavel": [
+    {
+      "id": 1,
+      "rank": 1,
+      "title": "Salada de Repolho com Cenoura Diferente",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1687181900491.png"
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Panqueca de Banana Fácil",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1710350677831.png"
+    },
+    {
+      "id": 3,
+      "rank": 3,
+      "title": "Panqueca de Abóbora",
+      "image": "https://cdn.aquelareceita.com.br/recipes/image-1664895343881.png"
+    }
+  ]
+}

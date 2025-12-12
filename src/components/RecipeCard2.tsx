@@ -26,11 +26,11 @@ const RecipeCard2: FC<RecipeCard2Props> = ({
       className="relative cursor-pointer bg-gray-100 transition-transform duration-200 hover:scale-[1.02]"
     >
       {/* Image Container */}
-      <div className="relative w-full pt-[75%]">
+      <div className="relative w-full aspect-[290/190]">
         <img 
           src={image} 
           alt={title}
-          className="absolute top-0 left-0 w-full h-full object-cover rounded-2xl"
+          className="w-full h-full object-cover rounded-2xl"
         />
         
         {/* Favorite Button */}
@@ -54,11 +54,11 @@ const RecipeCard2: FC<RecipeCard2Props> = ({
       </div>
 
       {/* Title and Description - aligned to left */}
-      <div className="pt-6 pb-2 px-2">
+      <div className="w-full pt-6 px-2">
         <h3 className="text-base font-bold text-dark m-0 mb-1">
           {title}
         </h3>
-        <p className="text-xs text-gray-400 mt-1">
+        <p className="text-sm text-gray-400 mt-1" style={{ paddingBottom: '0.5rem' }}>
           {description}
         </p>
       </div>
