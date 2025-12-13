@@ -7,7 +7,7 @@ const RecipeCard3: FC<RecipeCard3Props> = ({ rank, image, title }) => {
   return (
     <div className="flex items-start gap-2 py-2">
       {/* Image with Rank Badge */}
-      <div className="flex-shrink-0 relative w-24 min-[1100px]:w-32">
+      <div className="flex-shrink-0 relative w-32">
         {/* Rank Badge - Positioned over image */}
         <div className="absolute -top-2 -left-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center z-10">
           <strong className="text-white text-sm">{rank}</strong>

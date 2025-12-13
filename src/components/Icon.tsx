@@ -48,7 +48,7 @@ const Icon: FC<IconProps> = ({ name, selected = false, size = 24, className = ''
       case 'favorite':
         return (
           <img 
-            src={selected ? '/src/assets-icons/favorite.png' : '/src/assets-icons/favorite_alt.png'} 
+            src={selected ? '/src/assets-icons/favorite.png' : '/src/assets-icons/favorite_alt.svg'} 
             alt="favorite" 
             width={size} 
             height={size}

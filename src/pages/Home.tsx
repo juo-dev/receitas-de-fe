@@ -45,12 +45,12 @@ const Home: FC = () => {
     <>
       <Header onHomeClick={handleHomeClick} onSearch={handleSearch} />
       
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen bg-gray-100 flex flex-col">
         {/* Main Container - All content inside max-width */}
-        <div className={COMMON_CLASSES.CONTAINER}>
+        <div className={`${COMMON_CLASSES.CONTAINER} flex-1`}>
           {/* Categories */}
-          <div className="bg-gray-100 p-4">
-            <div className="flex flex-row gap-4 overflow-x-auto pb-2 scrollbar-hide lg:justify-center">
+          <div className="bg-gray-100 px-2 py-4 md:px-4">
+            <div className="flex flex-row gap-2 md:gap-2 overflow-x-auto pb-2 scrollbar-hide lg:justify-center">
               {/* Botão Início - apenas desktop */}
               <div className="hidden lg:block">
                 <CategoryItem
@@ -83,27 +83,25 @@ const Home: FC = () => {
               onMoreClick={() => console.log('Ver mais doces')}
             />
 
-            {/* Cards Grid - Responsive with horizontal scroll */}
-            <div className={COMMON_CLASSES.SCROLL_CONTAINER}>
-              <div className={GRID_CLASSES.RESPONSIVE_5_COL}>
-                {FEATURED_RECIPES.map((recipe) => (
-                  <RecipeCard1
-                    key={recipe.id}
-                    {...recipe}
-                  />
-                ))}
-              </div>
+            {/* Cards Grid - Scrollable horizontal < 1024px, then 5 cols desktop */}
+            <div className={GRID_CLASSES.RECIPE_CARD_1}>
+              {FEATURED_RECIPES.map((recipe) => (
+                <RecipeCard1
+                  key={recipe.id}
+                  {...recipe}
+                />
+              ))}
             </div>
           </section>
 
           {/* Main Content - 3/4 and 1/4 Layout */}
-          <div className="px-4 flex gap-4">
+          <div className="px-4 flex gap-4 flex-col xl:flex-row">
             {/* Left Section - 3/4 - Últimas receitas */}
-            <main className="flex-[3] max-[487px]:pr-4" aria-labelledby="latest-recipes">
+            <main className="flex-[3] w-full" aria-labelledby="latest-recipes">
               <SectionHeader title="Últimas receitas" />
 
-              {/* Grid responsive: 2 cols < 488px, 3 cols >= 488px */}
-              <div className={GRID_CLASSES.RECIPE_2_COL}>
+              {/* Grid responsive: 2 cols mobile, 3 cols tablet, 3 cols desktop */}
+              <div className={GRID_CLASSES.RECIPE_CARD_2}>
                 {LATEST_RECIPES.map((recipe) => (
                   <RecipeCard2
                     key={recipe.id}
@@ -120,14 +118,14 @@ const Home: FC = () => {
               />
             </main>
 
-            {/* Right Section - 1/4 - Melhores receitas */}
+            {/* Right Section - 1/4 - Melhores receitas - Only desktop */}
             <aside 
-              className="hidden min-[720px]:block flex-1 bg-gray-100 rounded-lg h-fit w-48 min-[1100px]:w-80 mr-4"
+              className="hidden xl:block flex-1 bg-gray-100 rounded-lg h-fit w-80 mr-4"
               aria-labelledby="top-recipes"
             >
               <h3 
                 id="top-recipes"
-                className="text-lg min-[1100px]:text-2xl font-bold text-dark mb-1 px-3 pt-3"
+                className="text-2xl font-bold text-dark mb-1 px-3 pt-3"
               >
                 Mais Curtidas
               </h3>
@@ -142,18 +140,16 @@ const Home: FC = () => {
             </aside>
           </div>
 
-          {/* Category Recipes Section - 6 columns - Full Width */}
+          {/* Category Recipes Section - Scrollable horizontal with progressive columns */}
           <section className="mt-8 px-4" aria-labelledby="category-recipes">
-            <div className={COMMON_CLASSES.SCROLL_CONTAINER}>
-              <div className={GRID_CLASSES.RESPONSIVE_6_COL}>
-                {Object.entries(CATEGORY_RECIPES).map(([categoryKey, recipes]) => (
-                  <CategorySection
-                    key={categoryKey}
-                    title={CATEGORY_TITLES[categoryKey as keyof typeof CATEGORY_TITLES]}
-                    recipes={recipes}
-                  />
-                ))}
-              </div>
+            <div className={GRID_CLASSES.RECIPE_CARD_4}>
+              {Object.entries(CATEGORY_RECIPES).map(([categoryKey, recipes]) => (
+                <CategorySection
+                  key={categoryKey}
+                  title={CATEGORY_TITLES[categoryKey as keyof typeof CATEGORY_TITLES]}
+                  recipes={recipes}
+                />
+              ))}
             </div>
           </section>
         </div>

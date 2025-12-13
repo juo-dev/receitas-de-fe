@@ -30,6 +30,20 @@ const Header: FC<HeaderProps> = ({ onHomeClick, onSearch }) => {
     }
   ];
 
+  // Menu items for mobile (without Favoritos)
+  const mobileMenuItems: MenuItem[] = [
+    {
+      icon: "/src/assets-icons/trofy.svg",
+      label: "Mais curtidas",
+      alt: "Mais curtidas"
+    },
+    {
+      icon: "/src/assets-icons/user.svg",
+      label: "Minha conta", 
+      alt: "Usuário"
+    }
+  ];
+
   const HamburgerButton = () => (
     <button 
       className="flex flex-col gap-1 p-2"
@@ -55,8 +69,8 @@ const Header: FC<HeaderProps> = ({ onHomeClick, onSearch }) => {
   return (
     <>
       {/* Header Mobile/Tablet */}
-      <header className="lg:hidden px-4 py-2 bg-primary w-full flex justify-between items-center">
-        <Logo className="h-12" />
+      <header className="lg:hidden px-4 py-3 bg-primary w-full flex justify-between items-center">
+        <Logo className="h-16" />
         <HamburgerButton />
       </header>
 
@@ -66,7 +80,7 @@ const Header: FC<HeaderProps> = ({ onHomeClick, onSearch }) => {
           <nav className="px-4 py-2 space-y-3" role="navigation" aria-label="Menu principal">
             <SearchBar className="w-full" onSearch={onSearch} />
             
-            {menuItems.map((item, index) => (
+            {mobileMenuItems.map((item, index) => (
               <HeaderButton
                 key={index}
                 icon={item.icon}

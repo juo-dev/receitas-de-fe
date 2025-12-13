@@ -17,6 +17,7 @@ const CategorySection: FC<CategorySectionProps> = ({ title, recipes, className =
       {recipes.map((recipe) => (
         <RecipeCard4
           key={recipe.id}
+          id={recipe.id}
           rank={recipe.rank}
           image={recipe.image}
           title={recipe.title}

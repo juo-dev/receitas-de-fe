@@ -19,7 +19,7 @@ const CategoryItem: FC<CategoryItemProps> = ({ name, icon, selected, onClick }) 
       data-selected={selected}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="category-item flex flex-col items-center gap-2 min-w-[80px] transition-all duration-200 bg-transparent border-none cursor-pointer"
+      className="category-item flex flex-col items-center gap-1 min-w-[70px] md:min-w-[80px] transition-all duration-200 bg-transparent border-none cursor-pointer"
       aria-label={`Filtrar por ${name}`}
     >
       <div 
@@ -28,7 +28,7 @@ const CategoryItem: FC<CategoryItemProps> = ({ name, icon, selected, onClick }) 
           selected ? 'bg-primary' : 'bg-white'
         }`}
       >
-        <Icon name={icon} selected={selected || isHovered} size={32} />
+        <Icon name={icon} selected={selected || isHovered} size={30} />
       </div>
       
       <span 
